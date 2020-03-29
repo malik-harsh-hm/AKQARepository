@@ -1,0 +1,46 @@
+﻿@model AKQA.UI2.Models.Person
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<h3>@ViewBag.Message</h3>
+<p>Please read the @Html.ActionLink("Read-Me", "About", "Home") page for application architecture description</p>
+
+
+
+@if (Model != null && !string.IsNullOrEmpty(Model.Name) && !string.IsNullOrEmpty(Model.StringAmount))
+{
+    <hr />
+    <div class="col-md-12">
+        <h3>Output</h3>
+        <p>@Html.LabelFor(m => m.Name, new { @class = "col-md-2 control-label" })  @Model.Name</p>
+        <p>@Html.LabelFor(m => m.StringAmount, new { @class = "col-md-2 control-label" })  @Model.StringAmount</p>
+    </div>
+}
+
+@using (Html.BeginForm("Submit", "Home", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    <hr />
+    <h3>Input</h3>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Name, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.DecimalAmount, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.DecimalAmount, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.DecimalAmount, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" class="btn btn-primary btn-lg" value="Submit" />
+        </div>
+    </div>
+
+}

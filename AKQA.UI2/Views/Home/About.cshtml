@@ -1,0 +1,200 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+
+<h3>@ViewBag.Message</h3>
+
+
+
+
+<hr />
+
+
+
+
+<p><strong><u><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px;">APPLICATION ARCHITECTURE</span></u></strong></p>
+<p>
+    <span style="font-size:
+      14px;">
+        <span style="font-family:
+        Arial, Helvetica, sans-serif;">The solution includes following projects -&nbsp;</span>
+    </span>
+</p>
+<ol>
+    <li>
+        <span style="font-size:
+      14px;">
+            <span style="font-family:
+        Arial, Helvetica, sans-serif;"><strong>AKQA.UI2</strong>- Web application project built with <strong>&nbsp;ASP.Net&nbsp;</strong><strong>MVC.&nbsp;</strong>Has a front end Javascript View that consumes Web API</span>
+        </span>
+    </li>
+    <li>
+        <span style="font-size:
+      14px;">
+            <span style="font-family:
+        Arial, Helvetica, sans-serif;"><strong>AKQA.API</strong>- Web API project built with <strong>ASP.Net Web-API</strong></span>
+        </span>
+    </li>
+    <li>
+        <span style="font-size:
+      14px;">
+            <span style="font-family:
+        Arial, Helvetica, sans-serif;"><strong>AKQA.Service</strong>- &nbsp;Webservice project built with <strong>WCF</strong></span>
+        </span>
+    </li>
+    <li>
+        <span style="font-size:
+      14px;">
+            <span style="font-family:
+        Arial, Helvetica, sans-serif;"><strong>AKQA.xUnit&nbsp;</strong>- Unit test project built with <strong>xUnit</strong></span>
+        </span>
+    </li>
+    <li>
+        <span style="font-size:
+      14px;">
+            <span style="font-family:
+        Arial, Helvetica, sans-serif;"><strong>AKQA.Business</strong>- Class Library project for <strong>Business layer</strong></span>
+        </span>
+    </li>
+    <li>
+        <span style="font-size:
+      14px;">
+            <span style="font-family:
+        Arial, Helvetica, sans-serif;"><strong>AKQA.SharedLogic</strong>- Class Library project for <strong>Shared interfaces</strong></span>
+        </span>
+    </li>
+    <li>
+        <span style="font-size:
+      14px;">
+            <span style="font-family:
+        Arial, Helvetica, sans-serif;"><strong>AKQA.Common</strong>- Class Library project containing the <strong>WCF Service Factory</strong></span>
+        </span>
+    </li>
+</ol>
+<p>
+    <span style="font-size:
+      14px;">
+        <span style="font-family:
+        Arial, Helvetica, sans-serif;"><strong><u>FRAMEWORKS USED</u></strong></span>
+    </span>
+</p>
+<ul>
+    <li>
+        <span style="font-size:
+      14px;">
+            <span style="font-family:
+        Arial, Helvetica, sans-serif;">
+                <span style="text-align: inherit;"><strong>Dependency Injection&nbsp;</strong>- Have demonstrated use of&nbsp;</span>
+                <a href="http://www.ninject.org/" target="_blank" style="text-align: inherit;"><strong>Ninject</strong></a><span style="text-align: inherit;">&nbsp;in&nbsp;</span><strong style="text-align: inherit;">UI, API&nbsp;</strong><span style="text-align: inherit;">and&nbsp;</span><strong style="text-align: inherit;">Service&nbsp;</strong><span style="text-align: inherit;">layers using constructor injection</span>
+            </span>
+        </span>
+    </li>
+    <li>
+        <span style="font-size:
+      14px;">
+            <span style="font-family:
+        Arial, Helvetica, sans-serif;">
+                <strong>Unit Testing</strong> - Have used
+                <a href="https://xunit.net/"  target="_blank"><strong>xUnit</strong></a> to write automated unit test cases for API and MVC controllers.&nbsp;
+            </span>
+        </span>
+    </li>
+    <li>
+        <span style="font-size:
+      14px;">
+            <span style="font-family:
+        Arial, Helvetica, sans-serif;"><strong>Mocking</strong>- Mocking framework has been implemented by using <strong>Moq</strong> library</span>
+        </span>
+    </li>
+</ul>
+<p>
+    <span style="font-size:
+      14px;">
+        <span style="font-family:
+        Arial, Helvetica, sans-serif;"><strong><u>WEB TECHNIQUES DEMONSTRATED</u></strong></span>
+    </span>
+</p>
+<ul>
+    <li>
+        <span style="font-size:
+      14px;">
+            <span style="font-family:
+        Arial, Helvetica, sans-serif;"><strong>Web API Call using Ajax</strong>- The MVC application also has a javascript view, using Ajax to call Web API</span>
+        </span>
+    </li>
+    <li>
+        <span style="font-size:
+      14px;">
+            <span style="font-family:
+        Arial, Helvetica, sans-serif;"><strong>CORS</strong>- Enabling CORS in <strong>Web API</strong> layer using NuGet Package (<span style="color: rgb(23, 23, 23); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: pre; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(250, 250, 250); text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;">Microsoft.AspNet.WebApi.Cors)</span></span>
+        </span>
+    </li>
+</ul>
+<p>
+    <span style="font-size:
+      14px;">
+        <span style="font-family:
+        Arial, Helvetica, sans-serif;"><strong><u>HOW TO RUN</u></strong></span>
+    </span>
+</p>
+<ol>
+    <li>
+        <span style="font-size:
+      14px;">
+            <span style="font-family:
+        Arial, Helvetica, sans-serif;">Run an instance of<strong> AKQA.Service</strong> project</span>
+        </span>
+    </li>
+    <li>
+        <span style="font-size:
+      14px;">
+            <span style="font-family:
+        Arial, Helvetica, sans-serif;">In the browser, <u>http://localhost:64936/ConvertService.svc</u> should open</span>
+        </span>
+    </li>
+    <li>
+        <span style="font-size:
+      14px;">
+            <span style="font-family:
+        Arial, Helvetica, sans-serif;">Run an instance of<strong> AKQA.API</strong> project.&nbsp;</span>
+        </span>
+    </li>
+    <li>
+        <span style="font-size:
+      14px;">
+            <span style="font-family:
+        Arial, Helvetica, sans-serif;">Navigate to postman and try calling the API <span style="color: rgb(80, 80, 80); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;"><u>http://localhost:65309/api/person/Convert</u></span> as per screenshot.</span>
+        </span>
+        <ul>
+            <li>
+                <span style="font-size:
+      14px;">
+                    <span style="font-family:
+        Arial, Helvetica, sans-serif;">Use following JSON format - { "Name": "Harsh Malik", "DecimalAmount": 10.22 }</span>
+                </span>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <span style="font-size:
+      14px;">
+            <span style="font-family:
+        Arial, Helvetica, sans-serif;">Now, Run an instance of <strong>&nbsp;</strong><strong>AKQA.UI2&nbsp;</strong>project and navigate to the <strong>Index&nbsp;</strong>(razor form) or <strong>AjaxApp</strong>(javascript form) page of Home controller.</span>
+        </span>
+    </li>
+</ol>
+<p><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px;"><strong><u>SCREENSHOTS</u></strong></span></p>
+
+<p>
+    <div class="display-field">
+        <strong>Running Wcf Service</strong><br />
+        <img src="~/images/Service.JPG" alt="Wcf Service Running" width="800" height="400"/>
+    </div>
+</p>
+<hr />
+<p>
+    <div class="display-field">
+        <strong>Calling API via Postman</strong><br />
+        <img src="~/images/API.JPG" alt="Call API via Postman" width="800 height="400" />
+    </div>
+</p>

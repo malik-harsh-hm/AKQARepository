@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewBag.Title = "AjaxApp";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>@ViewBag.Message</h3>
+<p>Please read the @Html.ActionLink("Read-Me", "About", "Home") page for application architecture description</p>
+
+
+<div class="col-md-12" id="divOutput" hidden="hidden">
+    <hr />
+    <h3>Output</h3>
+    <p><label class="col-md-2 control-label">Name:</label><label id="lblName"></label></p>
+    <p><label class="col-md-2 control-label">StringAmount:</label><label id="lblStringAmount"></label></p>
+</div>
+
+
+<form name="form1" id="form1" class="form-horizontal">  
+    <hr />
+    <h3>Input</h3>
+    <div class="form-group">
+        <label id="fr_Name" class="col-md-2 control-label">Name</label>
+        <div class="col-md-10">
+            <input type="text" class="form-control" name="Name" id="Name" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label id="fr_DecimalAmount" class="col-md-2 control-label">DecimalAmount</label>
+        <div class="col-md-10">
+            <input type="text" class="form-control" name="DecimalAmount" id="DecimalAmount" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input id="Submit" type="button" class="btn btn-primary btn-lg" value="Submit" />
+        </div>
+    </div>
+</form>
+
+<script>
+    $(document).ready(function () {
+        $("#Submit").click(function () {
+            $("#divOutput").show();
+            $.ajax({
+                url: 'http://localhost:65309/api/person/Convert',
+                type: 'POST',
+                dataType: 'json',
+                data: $('#form1').serialize(),
+                success: function (data, textStatus, xhr) {
+                    console.log(data);
+                    var name = $("#Name").val();
+                    $("#lblName").text(name);
+                    $("#lblStringAmount").text(data);
+                },
+                error: function (xhr, textStatus, errorThrown) {
+                    console.log(textStatus);
+                }
+            });
+        });
+    });
+</script>

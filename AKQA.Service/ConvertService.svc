@@ -1,0 +1,5 @@
+﻿<%@ ServiceHost Language="C#" 
+    Debug="true" 
+    Service="AKQA.Service.ConvertService" 
+    CodeBehind="ConvertService.svc.cs"
+    Factory="Ninject.Extensions.Wcf.NinjectServiceHostFactory"%>
